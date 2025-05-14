@@ -4,17 +4,6 @@ import Hamburger from "../Hamburger";
 import EnglishFlag from "../../assets/english-flag.png";
 
 const Navbar = (props) => {
-  const [showNavbar, setShowNavbar] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setShowNavbar(window.scrolY > 800);
-    };
-    window.addEventListener("scroll", handleScroll);
-
-    return () => window.removeEventListener("scroll");
-  });
-
   const navLinkClasses = ({ isActive }) =>
     `text-[16px] py-[8px] px-[16px] rounded transition-colors  duration-200 whitespace-nowrap ${
       isActive
