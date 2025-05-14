@@ -1,0 +1,19 @@
+{
+  "name": "testzevtabs",
+  "version": "1.0.0",
+  "description": "Test",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/batkt/testZevtabs.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/batkt/testZevtabs/issues"
+  },
+  "homepage": "https://github.com/batkt/testZevtabs#readme"
+}
