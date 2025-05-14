@@ -1,0 +1,17 @@
+.SideBar {
+  width: 280px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  z-index: 200;
+  padding: 32px 16px;
+  transition: transform 0.3s ease-out;
+}
+
+.Open {
+  transform: translateY(0);
+}
+.Close {
+  transform: translateY(-100%);
+}
