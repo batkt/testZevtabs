@@ -8,10 +8,11 @@ const Navbar = (props) => {
     `text-[16px] py-[8px] px-[16px] rounded transition-colors  duration-200 whitespace-nowrap ${
       isActive
         ? "bg-[#EBE7FF] text-[#673AB7] font-semibold"
-        : "bg-white text-[#141727]"
+        : "bg-white text-[#141727] hover:bg-[#EBE7FF] hover:bg-[#673AB7]"
     }`;
+
   return (
-    <nav className="text-[#141727] w-full h-[100px] bg-[#fff] z-50 top-0 left-0  flex justify-between items-center px-[110.4px]">
+    <nav className="text-[#141727] w-full h-[100px] bg-[#fff] z-90 top-0 left-0  flex justify-between items-center px-[110.4px]">
       <div className="flex space-x-2 flex-1 items-center">
         <p>
           <img
@@ -43,7 +44,10 @@ const Navbar = (props) => {
         <img src={EnglishFlag} alt="English" className="h-full w-auto" />
       </div>
 
-      <Hamburger toggleSidebar={props.toggleSidebar} />
+      <Hamburger
+        toggleSidebar={props.toggleSidebar}
+        showSidebar={props.showSidebar}
+      />
     </nav>
   );
 };

@@ -1,26 +1,31 @@
 import React from "react";
 
-const Sidebar = ({ showSidebar, toggleSidebar }) => {
+const Sidebar = ({ showSidebar }) => {
   return (
     <div
       className={`
-        fixed top-0 left-0 w-full bg-[#673AB7] text-white z-40 transition-transform duration-300 ease-in-out
+        fixed top-0 left-0 w-full  text-white z-20 transition-transform duration-300 ease-in-out
         ${showSidebar ? "translate-y-[100.34px]" : "-translate-y-full"}
         xl:hidden
       `}
     >
-      <div className="flex flex-col items-center space-y-6 py-8 text-lg">
-        <button onClick={toggleSidebar}>✕</button>
-        <a href="/" className="hover:text-gray-200">
+      <div className="flex h-[48.8px] bg-white text-black items-start justify-center pl-6 flex-col  space-y-6 py-8 text-lg">
+        <a href="/" className="hover:text-[#673AB7]">
           Эхлэл
         </a>
-        <a href="/" className="hover:text-gray-200">
+      </div>
+      <div className="flex h-[48.8px] bg-white text-black items-start justify-center pl-6 flex-col  space-y-6 py-8 text-lg">
+        <a href="/products" className="hover:text-[#673AB7]">
           Бүтээгдэхүүн
         </a>
-        <a href="/" className="hover:text-gray-200">
+      </div>
+      <div className="flex h-[48.8px] bg-white text-black items-start justify-center pl-6 flex-col  space-y-6 py-8 text-lg">
+        <a href="/service" className="hover:text-[#673AB7]">
           Үйлчилгээ
         </a>
-        <a href="/" className="hover:text-gray-200">
+      </div>
+      <div className="flex h-[48.8px] bg-white text-black items-start justify-center pl-6 flex-col  space-y-6 py-8 text-lg">
+        <a href="/contact" className="hover:text-[#673AB7]">
           Холбоо барих
         </a>
       </div>
