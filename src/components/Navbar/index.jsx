@@ -10,7 +10,6 @@ const Navbar = (props) => {
         ? "bg-[#EBE7FF] text-[#673AB7] font-semibold"
         : "bg-white text-[#141727]"
     }`;
-
   return (
     <nav className="text-[#141727] w-full h-[100px] bg-[#fff] z-50 top-0 left-0  flex justify-between items-center px-[110.4px]">
       <div className="flex space-x-2 flex-1 items-center">
