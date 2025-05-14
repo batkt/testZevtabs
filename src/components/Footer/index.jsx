@@ -2,13 +2,12 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF, faInstagram, faTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons';
 
-import Tooltip from './footerComp/tooltip';
-
 function Footer() {
   return (
-    <footer className="bg-[#0F1123] text-white pb-6 px-6 pt-24 w-full bottom-0 left-0">
-      <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-10">
-        <div className="mb-10 md:mb-0"> 
+
+<footer className="bg-[#0F1123] text-white pb-6 pt-24 w-full fixed bottom-0 left-0">
+  <div className="container mx-auto px-4 md:px-6 grid md:grid-cols-3 gap-10 w-full">
+     <div className="mb-10 md:mb-0"> 
           <div className="flex items-center space-x-2 mb-4">
             <img
               src="https://www.zevtabs.mn/_next/image?url=%2Flogo.png&w=128&q=75"
@@ -49,8 +48,8 @@ function Footer() {
                   onMouseMove={(e) => {
                     const tooltip = document.getElementById(`tooltip-${index}`);
                     if (tooltip) {
-                      tooltip.style.left = `${e.clientX + 15}px`;
-                      tooltip.style.top = `${e.clientY + 15}px`;
+                      tooltip.style.left = `${e.clientX + 10}px`;
+                      tooltip.style.top = `${e.clientY - 10 }px`;
                     }
                   }}
                 >
@@ -114,13 +113,15 @@ function Footer() {
             </ul>
           </div>
         </div>
-      </div>
+  </div>
 
-      {/* Доод хэсэг */}
-      <div className="border-t border-gray-800 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center text-gray-500 text-sm">
-        © ZEV-TABS LLC 2025. Бүх эрх хуулиар баталгаажсан
+  {/* Доод хэсэг */}
+  <div className="container mx-auto px-4 md:px-6 border-t border-gray-800 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center text-gray-500 text-sm">
+    © ZEV-TABS LLC 2025. Бүх эрх хуулиар баталгаажсан
 
-        <div className="flex space-x-4 mt-4 md:mt-0">
+    <div className="flex space-x-4 mt-4 md:mt-0">
+      {/* Social buttons */}
+      <div className="flex space-x-4 mt-4 md:mt-0">
           <button className="rounded-lg border border-transparent px-4 py-2 text-base font-medium bg-[#1a1a1a] cursor-pointer transition duration-300 hover:border-[#646cff]  focus:outline-webkit-focus-ring-color">
             <FontAwesomeIcon icon={faFacebookF} />
           </button>
@@ -134,8 +135,9 @@ function Footer() {
             <FontAwesomeIcon icon={faYoutube} />
           </button>
         </div>
-      </div>
-    </footer>
+    </div>
+  </div>
+</footer>
   );
 }
 
