@@ -52,6 +52,8 @@ function OurService() {
 
         {/* Body хэсэг */}
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-center">
+
+          
           {/* Services */}
           <div className="lg:w-1/2 space-y-6">
             {services.map((service, index) => (
@@ -81,10 +83,6 @@ function OurService() {
                     <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
                 </div>
             </div>
-
-
-
-
         </div>
       </div>
     </div>
