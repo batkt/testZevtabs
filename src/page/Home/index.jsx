@@ -26,10 +26,10 @@ const Home = () => {
           Дэвшилдэт технологи ашиглан таны бизнесийн ашгийг нэмэгдүүлж, хяналтыг
           сайжруулна
         </p>
-        <Link to="/contact" className={css.button}>
-          Бидэнтэй холбогдох
+        <button className="flex flex-row items-center h-12 w-40 px-[18px] bg-[#5f41fb] text-white rounded-[5px] hover:cursor-pointer transition-colors duration-300 hover:bg-[#4b2fd3]">
+          <Link to="/contact">Бидэнтэй холбогдох</Link>
           <FontAwesomeIcon icon={faArrowRight} />
-        </Link>
+        </button>
       </div>
       <div>
         <img
