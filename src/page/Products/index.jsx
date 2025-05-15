@@ -1,15 +1,14 @@
 import React, { useState } from "react";
 
 function Products() {
-  const [selectedProduct, setSelectedProduct] = useState(null);
-
   const products = [
     {
       id: 1,
       url: "/products/parkEase",
       name: "ParkEase",
       title: "Зогсоолын төлбөр тооцооны систем",
-      description: "Камер болон хаалтын төхөөрөмжтэй холбогдож төлбөрийг бүртгэн и-баримт хэвлэх боломжтой удирдлагын систем ба таны хүссэн тариф болон цагийн хязгаарлалтаар тооцоолон бодох чадвартай...",
+      description:
+        "Камер болон хаалтын төхөөрөмжтэй холбогдож төлбөрийг бүртгэн и-баримт хэвлэх боломжтой удирдлагын систем ба таны хүссэн тариф болон цагийн хязгаарлалтаар тооцоолон бодох чадвартай...",
       logo: "https://www.zevtabs.mn/parkEaseLogo.svg",
       image: "https://www.zevtabs.mn/ParkEase1.svg",
     },
@@ -18,7 +17,8 @@ function Products() {
       url: "/products/rently",
       name: "Rently",
       title: "ТАЛБАЙН ТҮРЭЭСИЙН СИСТЕМ",
-      description: "Түрээсийн болон эзэмшлийн талбайн гэрээг удирдан зохицуулах, мөнгөн урсгалыг хянах...",
+      description:
+        "Түрээсийн болон эзэмшлийн талбайн гэрээг удирдан зохицуулах, мөнгөн урсгалыг хянах...",
       logo: "https://www.zevtabs.mn/rentlyLogo.svg",
       image: "https://www.zevtabs.mn/toyLand1.svg",
     },
@@ -27,7 +27,8 @@ function Products() {
       url: "/products/posease",
       name: "PosEase",
       title: "Кассын төлбөр тооцооны систем",
-      description: "Олон төрлийн төлбөрийн шийдлийг багтаасан бараа материалын үлдэгдэл хөтлөн удирдлагын хяналтыг сайжруулах...",
+      description:
+        "Олон төрлийн төлбөрийн шийдлийг багтаасан бараа материалын үлдэгдэл хөтлөн удирдлагын хяналтыг сайжруулах...",
       logo: "https://www.zevtabs.mn/posEaseLogo.svg",
       image: "https://www.zevtabs.mn/PosEase1.svg",
     },
@@ -36,7 +37,8 @@ function Products() {
       url: "/products/hicar",
       name: "Hi-Car",
       title: "Зогсоолын төлбөр тооцооны систем",
-      description: "Жолоочийг угтахаас үдэх хүртэлх засвар урсгалыг бүртгэлжүүлэн...",
+      description:
+        "Жолоочийг угтахаас үдэх хүртэлх засвар урсгалыг бүртгэлжүүлэн...",
       logo: "https://www.zevtabs.mn/hicarLogo.svg",
       image: "https://www.zevtabs.mn/hicar1.svg",
     },
@@ -51,8 +53,10 @@ function Products() {
     },
   ];
 
+  const [selectedProduct, setSelectedProduct] = useState(products[0]);
+
   return (
-    <div className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-gray-50 py-24 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <h1 className="text-4xl font-bold text-center text-gray-900 mb-12">
           Манай Бүтээгдэхүүнүүд
@@ -72,12 +76,13 @@ function Products() {
                   alt={product.name}
                   className="w-12 h-12 mb-2"
                 />
-                <p className="text-center text-sm font-medium text-gray-800">{product.name}</p>
+                <p className="text-center text-sm font-medium text-gray-800">
+                  {product.name}
+                </p>
               </div>
             </div>
           ))}
         </div>
-
 
         {/* Дэлгэрэнгүй хэсэг */}
         {selectedProduct && (
@@ -99,12 +104,18 @@ function Products() {
                     className="h-16 w-16 mr-4"
                   />
                   <div>
-                    <h2 className="text-2xl font-bold text-gray-900">{selectedProduct.name}</h2>
-                    <h3 className="text-xl text-blue-600">{selectedProduct.title}</h3>
+                    <h2 className="text-2xl font-bold text-gray-900">
+                      {selectedProduct.name}
+                    </h2>
+                    <h3 className="text-xl text-blue-600">
+                      {selectedProduct.title}
+                    </h3>
                   </div>
                 </div>
 
-                <p className="text-gray-700 mb-6">{selectedProduct.description}</p>
+                <p className="text-gray-700 mb-6">
+                  {selectedProduct.description}
+                </p>
 
                 <div className="flex flex-wrap gap-4">
                   <button className="bg-blue-600 text-white hover:bg-blue-700 px-6 py-3 rounded-lg font-medium transition-colors">
